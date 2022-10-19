@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+body{background:black;}
+img{max-width:98%;}
+
+
+
+#header{width:98%;margin:auto;text-align:center;background:black;color:white;display:flex
+ align-items: flex-start;
+}
+#banner{width:100%;}
+#logo{width:20%;position:absolute;left:60%;top:12%;}
+
+
+
+
+#nav{width:
+98%;margin:auto;text-align:center;background:olive;color:black;
+box-shadow:0px 5px 10px gold;
+
+}
+
+
+
+#container
+{
+width:98%;
+background:can;
+font-size:35px;color:white;
+text-align:center;
+display:flex;
+margin:auto;
+paddinf:5px;
+flex-wrap: wrap;
+justify-content: flex-start;
+justify-content: space-around;
+
+}
+
+#nav ol {list-style:none;}
+
+#nav ol li{background:yellow;padding:20px;text-align:center;margin-left:-40px;
+background-image: url(fimages/mobilemenu.png);
+background-size:cover;color:yellow;
+
+}
+
+
+#nav ol li:hover{background:orange;cursor:pointer;color:green;}
+
+
+
+
+#left{width:100%;}
+#middle{width:100%;text-align:justify;}
+#right{width:100%;}
+
+
+#left{margin:1px;}
+
+#middle{margin:1px;font-size:3vw;color:gold;text-align:justufy;}
+
+
+
+
+#right{background:re;margin:1px;text-align:justufy;}
+
+
+/*  Footer   */
+a:link,a:visited{color:white;text-decoration:none;}
+
+
+#footer,#row{background:#24240f;display:flex;color:white;font-size:15px;width:98%;text-align:left;
+flex-flow: row wrap;
+justify-content:center;
+padding-top:10px;}
+
+
+#myaacount{width:55%;}
+#order{width:55%;}
+#contact{width:55%;}
+#row{width:100%; 
+align-items:stretch;
+}
+/*  Footer End **** */
+
+label{
+color:orange;
+font-size:2vw;font-family:verdana;
+padding:3px;
+
+
+}
+
+
+.inputstyle{
+background:#1a0f00;
+color:orange;
+font-size:2vw;font-family:verdana;
+padding:3px;
+width:95%;
+border:0px;
+border-bottom:0.10vw yellow solid;
+
+}
+
+
+
+
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */ 
+
+
+
+
+
+@media only screen and (min-width:481px)
+{
+
+
+#nav ol li
+{
+background-image: url(fimages/pic1.jpg);
+}
+#header img{width:100%;}
+#nav{
+display:flex;
+flex-wrap: wrap;
+justify-content:space-around;
+}
+
+#nav ol li{
+padding:10px;display:inline-block;text-align:center;margin-left:0px;}
+
+
+
+#left{background:gren;width:20%;}
+#middle{width:78%;font-size:2.30vw;}
+#right{width:100%;}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+
+@media only screen and (min-width: 769px)
+ {
+#header{margin-top:70px;}	
+
+#logo{left:60%;top:40%;}
+
+
+#nav{position:fixed;top:0px;width:97%;margin-left:12px;}
+
+#footer,#row{background:#24240f;display:flex;color:white;font-size:15px;width:98%;text-align:left;height:135px;
+flex-flow: row wrap;
+justify-content: space-around;
+padding-top:20px;
+}
+
+
+
+#middle{width:65%;font-size:1.50vw;}
+
+
+
+
+ #myaacount{width:20%;}
+#order{width:20%;}
+#contact{width:20%;}       
+#row{width:100%; 
+align-items:stretch;
+
+
+
+ }
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+<div id="header" >
+
+
+
+	<div id="banner" style="display:none">
+
+		<img src="fimages/banner1.png">
+
+	</div>
+	
+ <div id="logo" style="display:none">	<img src="fimages/logo.jpg"></div>
+</div>
+<div id="nav">
+<ol>
+<li><a href="index.html">Home</a></li>
+<li><a href="product.html#top">PRODUCT</a></li>
+<li>SERVICES</li>
+<li><a href="about.html#top">ABOUT</a></li>
+<li><a href="data.html#top">DATA</a></li>
+
+</ol>
+
+
+
+ </div>
+<div id="container" >
+<name ="top"
+	<div id="left" style="display:none">
+
+	</div>
+		<div id="middle">
+		<h1>Register with  us </h1>
+
+       		<form method="post"  action="index.html">
+
+
+           <table  border="0" cellpaddin="2" width="100%" >
+<tr>
+<td><label>Name</label></td><td><input class="inputstyle" type="Text" Placholder="Name..." Title="Type Name..">
+</td>
+</tr>
+
+<tr>
+<td><label>Age</label></td><td><input class="inputstyle" type="Text" Placholder="Name..." Title="Type Age..">
+</td>
+</tr>
+              
+  
+<tr>
+<td><label>Address</name></td><td><input class="inputstyle" type="Text" Placholder="Name..." Title="Type Address..">
+</td>
+</tr>
+
+
+<tr>
+<td><label>city</label></td><td><input class="inputstyle" type="Text" Placholder="Name..." Title="Type city..">
+</td>
+</tr>
+             
+<tr>
+<td><label>Email</label></td><td><input class="inputstyle" type="email" Placholder="Name..." Title="Type Email address..">
+</td>
+</tr>
+
+<tr>
+<td><label>Gender</label></td><td><input class="inputstyle" type="Text" Placholder="Name..." Title="Type Gende Here..">
+</td>
+</tr>
+
+<tr>
+<td><label>About Yourself</label></td><td><textarea class="inputstyle" rows="5" cols="20" Placholder="Type About Yourself.." Title="Type About you.."></textarea>
+</td>
+</tr>
+
+<tr>
+<td><input type="submit" class="inputstyle" value="send to us"></td>
+<td>
+<input class="inputstyle" type="reset" >
+</td>
+</tr>
+
+
+           </table>
+
+            </form>
+
+		</div>
+
+
+
+	    <div id="right"  style="display:none">
+	   
+          </div>
+</div>
+
+<br/>
+<br/>
+
+
+<div id="footer">
+
+<div id="myaacount"><a href="#">MY ACCOUNT&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472; <br/>
+<ul>
+<li><a href="#">My Order</a></li>
+<li><a href="#">My Credits slip</a></li>
+<li><a href="#">My address</a></li>
+<li><a href="#">My Per Persional info</a></li>
+</ul>
+
+
+</a></div>
+<div id="order"><a href="#">ORDERS</a>&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+<br/>
+<ul>
+<li><a href="#">Payments options</a></li>
+<li><a href="#">Shipping and Delivery</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#">Shipping</a></li>
+</ul>
+
+
+
+</div>
+<div id="contact"><a href="#">CONTACT US</a>&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;&#9472;
+<br/>
+<ul>
+<li><a href="#">Payments options</a></li>
+<li><a href="#">Location</a></li>
+<li><a href="#">Phone</a></li>
+<li><a href="#">Suports</a></li>
+</ul>
+
+
+
+</div>
+<div id="row">
+<div id="one">
+Jewellery&copy 2017 Demo Store . All Right Reserved  By PP Jewellery</div>
+<div id="two">
+
+Faceboo  yourTube   Facebook  visa Metro card
+</div>
+</div>
+
+
+</div>
+
+
+
+</body>
+</html>

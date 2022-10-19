@@ -1,0 +1,188 @@
+
+body{background:black;}
+img{max-width:98%;}
+
+
+
+#header{width:98%;margin:auto;text-align:center;background:black;color:white;display:flex
+ align-items: flex-start;
+}
+#banner{width:100%;}
+#logo{width:20%;position:absolute;left:60%;top:12%;}
+
+
+
+
+#nav{width:
+98%;margin:auto;text-align:center;background:olive;color:black;
+box-shadow:0px 5px 10px gold;
+
+}
+
+
+
+#container
+{
+width:98%;
+background:can;
+font-size:35px;color:white;
+text-align:center;
+display:flex;
+margin:auto;
+paddinf:5px;
+flex-wrap: wrap;
+justify-content: flex-start;
+justify-content: space-around;
+
+}
+
+#nav ol {list-style:none;}
+
+#nav ol li{background:yellow;padding:20px;text-align:center;margin-left:-40px;
+background-image: url(fimages/mobilemenu.png);
+background-size:cover;color:yellow;
+
+}
+
+
+#nav ol li:hover{background:orange;cursor:pointer;color:green;}
+
+
+
+
+#left{width:100%;}
+#middle{width:100%;text-align:justify;}
+#right{width:100%;}
+
+
+#left{margin:1px;}
+
+#middle{margin:1px;font-size:3vw;color:gold;text-align:justufy;}
+
+
+
+
+#right{background:re;margin:1px;text-align:justufy;}
+
+
+/*  Footer   */
+a:link,a:visited{color:white;text-decoration:none;}
+
+
+#footer,#row{background:#24240f;display:flex;color:white;font-size:15px;width:98%;text-align:left;
+flex-flow: row wrap;
+justify-content:center;
+padding-top:10px;}
+
+
+#myaacount{width:55%;}
+#order{width:55%;}
+#contact{width:55%;}
+#row{width:100%; 
+align-items:stretch;
+}
+/*  Footer End **** */
+
+
+
+
+
+
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */ 
+
+
+
+
+
+@media only screen and (min-width:481px)
+{
+
+
+#nav ol li
+{
+background-image: url(fimages/pic1.jpg);
+}
+#header img{width:100%;}
+#nav{
+display:flex;
+flex-wrap: wrap;
+justify-content:space-around;
+}
+
+#nav ol li{
+padding:10px;display:inline-block;text-align:center;margin-left:0px;}
+
+
+
+#left{background:gren;width:20%;}
+#middle{width:78%;font-size:2.30vw;}
+#right{width:100%;}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+
+@media only screen and (min-width: 769px)
+ {
+#header{margin-top:70px;}	
+
+#logo{left:60%;top:40%;}
+
+
+#nav{position:fixed;top:0px;width:97%;margin-left:12px;}
+
+#footer,#row{background:#24240f;display:flex;color:white;font-size:15px;width:98%;text-align:left;height:135px;
+flex-flow: row wrap;
+justify-content: space-around;
+padding-top:20px;
+}
+
+
+#left{width:20%;margin-top:20px;}
+#middle{width:65%;font-size:1.50vw;}
+#right{width:13%;height:100%;margin-top:20px;}
+#right img{margin-top:20px;}
+
+
+
+
+ #myaacount{width:20%;}
+#order{width:20%;}
+#contact{width:20%;}       
+#row{width:100%; 
+align-items:stretch;
+
+ }
+
+
+
+
+
+
+
+
+
+
+
