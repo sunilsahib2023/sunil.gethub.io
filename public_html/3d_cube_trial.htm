@@ -1,0 +1,140 @@
+<!Doctype HTML>
+
+<html>
+
+ <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142213830-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142213830-1');
+</script>
+
+<!--
+
+http://css3clickchart.com/#masks
+http://desandro.github.io/3dtransforms/
+
+-->
+
+  </head>
+<style>
+.container {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  perspective: 1000px;
+  background:black;
+  left:200px;
+  top:10px;
+}
+
+#cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+#cube figure {
+  width: 196px;
+  height: 196px;
+  display: block;
+  position: absolute;
+  border: 3px solid black;
+  background:yellow;
+  opacity:0.70;
+}
+
+#cube .front  { transform: rotateY(   0deg );  background:red; }
+#cube .back   { transform: rotateX( 180deg ); background:green;}
+#cube .right  { transform: rotateY(  90deg );background:cyan; }
+#cube .left   { transform: rotateY( -90deg ); background:orange;}
+#cube .top    { transform: rotateX(  90deg );background:pink; }
+#cube .bottom { transform: rotateX( -90deg ); background:blue;}
+
+
+#cube .front  { transform: rotateY(   0deg ) translateZ( 100px ); }
+#cube .back   { transform: rotateX( 180deg ) translateZ( 100px ); }
+#cube .right  { transform: rotateY(  90deg ) translateZ( 100px ); }
+#cube .left   { transform: rotateY( -90deg ) translateZ( 100px ); }
+#cube .top    { transform: rotateX(  90deg ) translateZ( 100px ); }
+#cube .bottom { transform: rotateX( -90deg ) translateZ( 100px ); }
+
+#cube { transform: translateZ( -100px ); }
+
+
+
+#cube.show-front  { transform: translateZ( -100px ) rotateY(    0deg ); }
+#cube.show-back   { transform: translateZ( -100px ) rotateX( -180deg ); }
+#cube.show-right  { transform: translateZ( -100px ) rotateY(  -90deg ); }
+#cube.show-left   { transform: translateZ( -100px ) rotateY(   90deg ); }
+#cube.show-top    { transform: translateZ( -100px ) rotateX(  -90deg ); }
+#cube.show-bottom { transform: translateZ( -100px ) rotateX(   90deg ); }
+
+
+#cube { transition: transform 1s; }
+
+</style>
+
+ 
+
+
+<body>
+<section class="container">
+  <div id="cube">
+    <figure class="front">Front-1</figure>
+    <figure class="back">Back- 2</figure>
+    <figure class="right">Right - 3</figure>
+    <figure class="left"> Left-4</figure>
+    <figure class="top">Top  - 5</figure>
+    <figure class="bottom">Bottom - 6</figure>
+  </div>
+</section>
+
+
+<p><a href="index.html">Home&nbsp;</a>&nbsp; &nbsp; <a href="javaScript.html">JavaScript</a></p>
+<p>&nbsp; </p>
+
+
+<script>
+
+d = document.getElementById("cube")
+
+r=1
+
+
+function sh()
+{
+r+=2
+
+d.style.transform="rotateY("+r+"deg) rotateX("+r+"deg)" 
+
+//d.style.translateY= rotateY"+r+"deg)" 
+
+//d.style.transform="
+ 
+
+document.title = r
+
+}
+
+function ch(event)
+{
+
+d.style.top = event.pageY+"px"
+d.style.left = event.pageX+"px"
+}
+setInterval("sh()",60)
+d.onmouseover=ch
+
+document.title="Ready"
+
+  </script>
+</body>
+
+</html>
+

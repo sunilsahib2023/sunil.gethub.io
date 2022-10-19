@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<style type="text/css">
+body {
+	background-color: #FFF;
+}
+#apDiv1 {
+	position:absolute;
+	left:16px;
+	top:75px;
+	width:391px;
+	height:30px;
+	z-index:1;
+}
+</style>
+<body onLoad="init()">
+
+
+<div id="mbox" style="position:absolute">
+<canvas id="sk"></canvas>
+</div>
+
+<p id="mes" style="position:absolute;left:300px">Message</p>
+
+
+<div id="apDiv1">
+  <p><img src="images/sunil.jpg" width="54" height="59"></p>
+  <p>My First work on canvas by javaScript</p>
+  <p>(sunilsahib2001@yahoo.co.in)</p>
+  <p>Click - start or stop draw</p>
+  <p>Use :- space bar to clear screen</p>
+  <p>Up/Down :-arrow for brush size</p>
+  <p>Left :- Arrow for Erase</p>
+  <p>   <a href="index.html">&nbsp;&nbsp;BACK</a></p>
+  <p>&nbsp;</p>
+
+
+<br/><br/><br/><br/><br/>
+<p><a href="index.html">Home&nbsp;</a>&nbsp; &nbsp; <a href="javaScript.html">JavaScript</a></p>
+<p>&nbsp; </p>
+
+</div>
+<script>
+
+drawcolor="normal"
+d=document.getElementById("mes")
+d.innerHTML="Message"
+
+m=document.getElementById("mbox")
+var c=document.getElementById("sk");
+var ctx=c.getContext("2d");
+var mycolor="red"
+drawmode="nodraw"
+
+w = window.innerWidth ;
+h =  window.innerHeight ;
+brushsize = 10
+
+c.width = w;				
+c.height = h;
+
+d.innerHTML="Draw"
+
+function onmousedown(event)
+{
+
+if(drawmode == "draw")
+{
+drawmode="nodraw"
+d.innerHTML="No-draw on"
+}
+else
+{
+drawmode="draw"
+d.innerHTML="Draw"
+}
+
+
+}
+
+function onmousemove(event)
+{
+
+if(drawmode=="draw")
+{
+d.innerHTML="Draw"
+ctx.beginPath();
+ctx.arc(event.pageX,event.pageY,brushsize,0,2*Math.PI);
+ mycolor = (Math.random() * 0xFFFFFF << 0).toString(16);
+
+//mycolor = Math.floor(Math.random()*176253).toString(16);
+
+if(drawcolor=="normal")
+{
+ctx.fillStyle="#"+mycolor
+ctx.stroke()
+}
+else
+{
+ctx.fillStyle="white"
+
+}
+ctx.fill()
+tx.strokeStyle="white"
+}
+
+
+}
+
+
+function onkeydown(event)
+{
+
+//alert(event.keyCode)
+if(event.keyCode == 37)
+{
+  if(drawcolor=="normal")
+     {
+     drawcolor="background"
+     d.innerHTML="Erase Mode"
+     }
+     else
+     {  
+      drawcolor="normal"
+      d.innerHTML="Normal Color mode" 
+     } 
+}
+
+if(event.keyCode == 38){brushsize++;d.innerHTML=brushsize}
+if(event.keyCode==39){mycolor=document.bgColor}
+if(event.keyCode==40){brushsize--;d.innerHTML=brushsize}
+if(event.keyCode==32){location.reload()}
+}
+
+
+
+
+
+function init()
+{
+
+
+document.addEventListener("mousedown",onmousedown,false)
+document.addEventListener("mousemove",onmousemove,false)
+document.addEventListener("keydown",onkeydown,false)
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+		
+
+
+</script> 
+
+
+
+
+</body>
+</html>
+
+
+

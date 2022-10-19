@@ -1,0 +1,26 @@
+@keyframes sk
+{
+
+10%{left:0%;}
+20%{left:-25%;}
+30%{left:-25%;}
+40%{left:-50%;}
+50%{left:-50%;}
+60%{left:-75;}
+70%{left:-75%;}
+100%{left:-75%;}
+
+}
+img{max-width:25%;}
+body{margin-left:0px;margin-right:0px;}
+
+#slide{width:410%;box-shadow:10px 10px 10px gray;margin:-5px;}
+#slide img{box-shadow:10px 10px 10px gray;position:relative;width:100%;float:left;animation:sk 5s ease-in-out infinite alternate }
+
+
+#mask{background:re;width:100%;height:350px;overflow:hidden;}
+:link{text-decoration:none;color:purple;}
+a:visited{text-decoration:none;color:brown;}
+a:hover{text-decoration:underline;}
+
+

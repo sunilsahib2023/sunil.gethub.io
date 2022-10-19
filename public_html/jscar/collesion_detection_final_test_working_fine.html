@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></s
+<script  src="angular.min.js"></script>
+<style>
+body{width:1500px;height:500px;cursor:pointer;}
+
+</style>
+</head>
+
+<body id="box">
+
+<div id="green" style="background:green;width:50px;height:50px;position:absolute;top:200px;left:200px;transition:2s;position:absolute;transition:2s;}
+"></div> 
+
+<div id="red"  style="background:red;width:50px;height:50px;transition:0.50s;position:absolute;top:100px;left:100px;position:absolute;"></div>
+
+<script>
+//r = 82   l = 76 t =84 d =68
+
+r = document.getElementById("red");g = document.getElementById("green");
+b = document.getElementById("box")
+
+
+b.addEventListener("keydown", checkkey);
+obl = 200
+obt = 100
+rleft = 200
+rtop = 100
+score = 1
+function checkkey(event)
+{
+gleft = 200
+gtop = 200
+
+      if( event.keyCode == 76){obl = obl+5; r.style.left=obl+"px" }
+      if( event.keyCode == 82){obl = obl-5 ; r.style.left=obl+"px"}
+      if( event.keyCode == 84){obt = obt-5;   r.style.top=obt+"px" }
+      if( event.keyCode == 68){obt = obt+5;   r.style.top=obt+"px" }
+rx = parseInt(r.style.left)
+ry = parseInt(r.style.top)
+gx = 200
+gy = 200
+
+}
+
+
+
+function test()
+{
+
+result = parseInt(r.style.left)< parseInt(g.style.left) + parseInt(g.style.width) &&
+         parseInt(r.style.left) + parseInt(r.style.width) > parseInt(g.style.left) &&
+         parseInt(r.style.top)< parseInt(g.style.top) +parseInt( g.style.height) &&
+         parseInt(r.style.top) + parseInt(r.style.height) >parseInt( g.style.top);
+document.title = result
+  	if(result) {
+       		document.title ="Score ="+score
+                                 
+                                 g.style.left =Math.round(Math.random()*1200)+"px"
+                                 g.style.top =Math.round(Math.random()*500)+"px"
+                                 score++
+    		 }
+		else
+		{	
+		document.title = "No Collision"
+		}
+                                   document.title ="Score ="+score
+                            //document.title = new Date()
+}
+
+setInterval("test()",10)
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+
+</html>
